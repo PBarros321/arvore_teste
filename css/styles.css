@@ -1,0 +1,117 @@
+body {
+    font: 14px sans-serif;
+}
+
+.linage {
+    fill: none;
+    stroke: rgb(87, 167, 41);
+    stroke-width: 2px;
+}
+
+.marriage {
+    fill: none;
+    stroke: blue;
+    stroke-width: 2px;
+}
+
+.marriageNode {
+    background-color: rgb(173, 33, 33);
+    border-radius: 2px 5px;
+}
+
+.man {
+    background-color: lightblue;
+    height: 60px;
+    border-style: solid;
+    border-radius: 20px 10px 20px 20px;
+    border-width: 2px;
+    box-sizing: border-box;
+}
+
+.woman {
+    background-color: pink;
+    height: 60px;
+    border-style: solid;
+    border-radius: 10px 10px 20px 20px;
+    border-width: 2px;
+    box-sizing: border-box;
+}
+
+.rico {
+    background-color: rgb(219, 231, 186);
+    height: 50px;
+    border-style: solid;
+    border-radius: 30px;
+    border-width: 1px;
+    box-sizing: border-box;
+}
+
+.emphasis {
+    font-weight: bold;
+    background-color: rgb(209, 113, 23);
+}
+
+p {
+    padding: 0;
+    margin: 2;
+    text-align: center;
+}
+
+svg {
+    background-color: #cef5d9;
+    background-image: radial-gradient(circle at center,
+            #9cddb0 2px,
+            transparent 3px);
+    background-size: 25px 25px;
+}
+
+/* CSS ADICIONAL PARA O MODAL */
+#person-modal {
+    display: none;
+    /* Oculto por padrão */
+    position: fixed;
+    z-index: 9999;
+    /* Garante que fique acima de tudo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fundo semi-transparente */
+}
+
+#modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    /* 5% do topo e centralizado */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    /* Largura máxima controlada */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#close-modal:hover,
+#close-modal:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+#person-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ADD8E6;
+}
