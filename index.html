@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+	<meta charset="utf-8">
+	<title>Árvore Genealógica</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+	<center style="background-color: #ADD8E6; padding: 10px; border-radius: 5px;">
+		<h1>Árvore Genealógica Gonsalves</h1>
+	</center>
+	<div id="graph"></div>
+
+	<div id="person-modal">
+		<div id="modal-content">
+			<span id="close-modal">&times;</span>
+
+			<div id="modal-body">
+				<div style="text-align: center; margin-bottom: 20px;">
+					<img id="person-photo" src="" alt="Foto da Pessoa">
+				</div>
+
+				<h2 id="person-name" style="text-align: center;"></h2>
+				<hr>
+				<p><strong>Nascimento:</strong> <span id="person-birth"></span></p>
+				<p><strong>Morte:</strong> <span id="person-death"></span></p>
+				<p><strong>Local:</strong> <span id="person-location"></span></p>
+				<p><strong>Ocupação:</strong> <span id="person-occupation"></span></p>
+				<p><strong>Apelido:</strong> <span id="person-nickname"></span></p>
+				<hr>
+				<p style="text-align: justify;"><small id="person-bio"></small></p>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="dTree.min.js"></script>
+
+	<script src="js/modal.js"></script>
+	<script src="js/tree.js"></script>
+
+</body>
+
+</html>

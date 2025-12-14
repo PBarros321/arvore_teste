@@ -1,0 +1,181 @@
+[
+  {
+    "name": "Maximino",
+    "class": "man",
+    "marriages": [
+      {
+        "spouse": {
+          "name": "Julinha",
+          "class": "woman rico"
+        },
+        "children": [
+          {
+            "name": "Valmir",
+            "class": "man",
+            "textClass": "emphasis",
+            "marriages": [
+              {
+                "spouse": {
+                  "name": "Estela",
+                  "class": "woman rico"
+                },
+                "children": [
+                  {
+                    "name": "Valdeci",
+                    "class": "man",
+                    "marriages": [
+                      {
+                        "spouse": {
+                          "name": "Graça",
+                          "class": "woman rico"
+                        },
+                        "children": [
+                          {
+                            "name": "Alisson",
+                            "class": "man",
+                            "extra": {
+                              "nickname": "Apelido",
+                              "birthDate": "DD/MM/AAAA",
+                              "deathDate": "DD/MM/AAAA",
+                              "location": "Cidade/Estado",
+                              "occupation": "Profissão",
+                              "photoURL": "img/alisson.jpg",
+                              "bio": "Biografia detalhada..."
+                            }
+                          },
+                          {
+                            "name": "Aline",
+                            "class": "woman"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Lita - Valdelice dos Santos Gonçalves",
+                    "class": "woman",
+                    "extra": {
+                      "nickname": "Apelido",
+                      "birthDate": "DD/MM/AAAA",
+                      "deathDate": "DD/MM/AAAA",
+                      "location": "Cidade/Estado",
+                      "occupation": "Profissão",
+                      "photoURL": "img/lita.jpg",
+                      "bio": "Biografia detalhada..."
+                    },
+                    "marriages": [
+                      {
+                        "spouse": {
+                          "name": "Jorge",
+                          "class": "man rico"
+                        },
+                        "children": [
+                          {
+                            "name": "Ana Júlia",
+                            "class": "woman"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Lito",
+                    "class": "man",
+                    "extra": {
+                      "nickname": "Apelido",
+                      "birthDate": "DD/MM/AAAA",
+                      "deathDate": "DD/MM/AAAA",
+                      "location": "Cidade/Estado",
+                      "occupation": "Profissão",
+                      "photoURL": "img/lito.jpg",
+                      "bio": "Biografia detalhada..."
+                    }
+                  },
+                  {
+                    "name": "Vado",
+                    "class": "man"
+                  },
+                  {
+                    "name": "Dino",
+                    "class": "man"
+                  },
+                  {
+                    "name": "Val",
+                    "class": "woman",
+                    "extra": {
+                      "nickname": "Nicinha"
+                    },
+                    "marriages": [
+                      {
+                        "spouse": {
+                          "name": "Orlando",
+                          "class": "man rico"
+                        },
+                        "children": [
+                          {
+                            "name": "Luana",
+                            "class": "woman"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Valdemir",
+                    "class": "man"
+                  },
+                  {
+                    "name": "Neca",
+                    "class": "woman"
+                  },
+                  {
+                    "name": "Quira",
+                    "class": "woman",
+                    "marriages": [
+                      {
+                        "spouse": {
+                          "name": "Manoel",
+                          "class": "man rico"
+                        },
+                        "children": [
+                          {
+                            "name": "Marcelo",
+                            "class": "man"
+                          },
+                          {
+                            "name": "Cris",
+                            "class": "woman"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Toinho",
+                    "class": "man"
+                  },
+                  {
+                    "name": "Vanda",
+                    "class": "woman"
+                  },
+                  {
+                    "name": "Dirinha",
+                    "class": "woman"
+                  },
+                  {
+                    "name": "Valmirzinho",
+                    "class": "man"
+                  },
+                  {
+                    "name": "Lena",
+                    "class": "woman"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
