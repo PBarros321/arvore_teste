@@ -19,13 +19,16 @@ treeJson = d3.json("data.json", function (error, treeData) {
                     alert('Right-click: ' + name);
                 },
 
-                // Sua função textRenderer (mantida)
-                textRenderer: function (name, extra, textClass) {
-                    if (extra && extra.nickname)
-                        name = name + " (" + extra.nickname + ")";
-                    return "<p class='" + textClass + "'>" + name + "</p>";
-                },
 
+
+                textRenderer: function (name, extra, textClass) {
+                    let displayName = "<strong>" + name + "</strong>";
+                    if (extra && extra.nickname) {
+                        // O apelido aparece embaixo, menor, entre parênteses
+                        displayName += "<br/><span style='font-size: 11px; opacity: 0.8;'>(" + extra.nickname + ")</span>";
+                    }
+                    return "<p class='" + textClass + "'>" + displayName + "</p>";
+                },
                 // Suas funções de clique em casamento (mantidas)
                 marriageClick: function (extra, id) {
                     alert('Clicked marriage node' + id);

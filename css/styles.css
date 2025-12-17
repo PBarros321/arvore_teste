@@ -1,45 +1,55 @@
 body {
-    font: 14px sans-serif;
+    font: 14px roboto slab, Arial, sans-serif;
+}
+
+.man,
+.woman,
+.rico,
+.marriageNode {
+    cursor: pointer;
 }
 
 .linage {
     fill: none;
-    stroke: rgb(87, 167, 41);
+    stroke: rgb(240, 30, 22);
     stroke-width: 2px;
 }
 
 .marriage {
     fill: none;
-    stroke: blue;
+    stroke: rgb(255, 83, 83);
     stroke-width: 2px;
 }
 
 .marriageNode {
-    background-color: rgb(173, 33, 33);
-    border-radius: 2px 5px;
+    background-color: #94a3b8;
+    border-radius: 50%;
+    border: none;
 }
 
+
 .man {
-    background-color: lightblue;
+    background-color: #d5ecfd;
     height: 60px;
     border-style: solid;
-    border-radius: 20px 10px 20px 20px;
-    border-width: 2px;
+    border-radius: 8px;
+    border-width: 1px;
     box-sizing: border-box;
 }
 
+
 .woman {
-    background-color: pink;
+    background-color: #fce4ec;
     height: 60px;
     border-style: solid;
-    border-radius: 10px 10px 20px 20px;
-    border-width: 2px;
+    border-radius: 8px;
+    border-width: 1px;
     box-sizing: border-box;
 }
 
 .rico {
-    background-color: rgb(219, 231, 186);
-    height: 50px;
+    background-color: #f1f8e9;
+    height: 60px;
     border-style: solid;
     border-radius: 30px;
     border-width: 1px;
@@ -52,17 +62,19 @@ body {
 }
 
 p {
-    padding: 0;
-    margin: 2;
+    padding: 5px;
+    margin: 0;
     text-align: center;
+    font-size: 13px;
+    line-height: 1.2;
 }
 
 svg {
-    background-color: #cef5d9;
+    background-color: #f7f6ca;
     background-image: radial-gradient(circle at center,
-            #9cddb0 2px,
-            transparent 3px);
-    background-size: 25px 25px;
+            #949e80 1px,
+            transparent 2px);
+    background-size: 20px 20px;
 }
 
 /* CSS ADICIONAL PARA O MODAL */

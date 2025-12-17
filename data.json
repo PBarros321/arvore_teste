@@ -2,32 +2,86 @@
   {
     "name": "Maximino",
     "class": "man",
+    "extra": {
+      "nickname": "Apelido",
+      "birthDate": "DD/MM/AAAA",
+      "deathDate": "DD/MM/AAAA",
+      "location": "Cidade/Estado",
+      "occupation": "Profissão",
+      "photoURL": "img/maximino.jpg",
+      "bio": "Biografia detalhada..."
+    },
     "marriages": [
       {
         "spouse": {
           "name": "Julinha",
-          "class": "woman rico"
+          "class": "woman rico",
+          "extra": {
+            "nickname": "Apelido",
+            "birthDate": "DD/MM/AAAA",
+            "deathDate": "DD/MM/AAAA",
+            "location": "Cidade/Estado",
+            "occupation": "Profissão",
+            "photoURL": "img/julinha.jpg",
+            "bio": "Biografia detalhada..."
+          }
         },
         "children": [
           {
             "name": "Valmir",
             "class": "man",
             "textClass": "emphasis",
+            "extra": {
+              "nickname": "Apelido",
+              "birthDate": "DD/MM/AAAA",
+              "deathDate": "DD/MM/AAAA",
+              "location": "Cidade/Estado",
+              "occupation": "Profissão",
+              "photoURL": "img/valmir.jpg",
+              "bio": "Biografia detalhada..."
+            },
             "marriages": [
               {
                 "spouse": {
                   "name": "Estela",
-                  "class": "woman rico"
+                  "class": "woman rico",
+                  "extra": {
+                    "nickname": "Apelido",
+                    "birthDate": "DD/MM/AAAA",
+                    "deathDate": "DD/MM/AAAA",
+                    "location": "Cidade/Estado",
+                    "occupation": "Profissão",
+                    "photoURL": "img/estela.jpg",
+                    "bio": "Biografia detalhada..."
+                  }
                 },
                 "children": [
                   {
                     "name": "Valdeci",
                     "class": "man",
+                    "extra": {
+                      "nickname": "Apelido",
+                      "birthDate": "DD/MM/AAAA",
+                      "deathDate": "DD/MM/AAAA",
+                      "location": "Cidade/Estado",
+                      "occupation": "Profissão",
+                      "photoURL": "img/valdeci.jpg",
+                      "bio": "Biografia detalhada..."
+                    },
                     "marriages": [
                       {
                         "spouse": {
                           "name": "Graça",
-                          "class": "woman rico"
+                          "class": "woman rico",
+                          "extra": {
+                            "nickname": "Apelido",
+                            "birthDate": "DD/MM/AAAA",
+                            "deathDate": "DD/MM/AAAA",
+                            "location": "Cidade/Estado",
+                            "occupation": "Profissão",
+                            "photoURL": "img/graca.jpg",
+                            "bio": "Biografia detalhada..."
+                          }
                         },
                         "children": [
                           {
@@ -45,7 +99,16 @@
                           },
                           {
                             "name": "Aline",
-                            "class": "woman"
+                            "class": "woman",
+                            "extra": {
+                              "nickname": "Apelido",
+                              "birthDate": "DD/MM/AAAA",
+                              "deathDate": "DD/MM/AAAA",
+                              "location": "Cidade/Estado",
+                              "occupation": "Profissão",
+                              "photoURL": "img/aline.jpg",
+                              "bio": "Biografia detalhada..."
+                            }
                           }
                         ]
                       }
@@ -67,12 +130,30 @@
                       {
                         "spouse": {
                           "name": "Jorge",
-                          "class": "man rico"
+                          "class": "man rico",
+                          "extra": {
+                            "nickname": "Apelido",
+                            "birthDate": "DD/MM/AAAA",
+                            "deathDate": "DD/MM/AAAA",
+                            "location": "Cidade/Estado",
+                            "occupation": "Profissão",
+                            "photoURL": "img/jorge.jpg",
+                            "bio": "Biografia detalhada..."
+                          }
                         },
                         "children": [
                           {
                             "name": "Ana Júlia",
-                            "class": "woman"
+                            "class": "woman",
+                            "extra": {
+                              "nickname": "Apelido",
+                              "birthDate": "DD/MM/AAAA",
+                              "deathDate": "DD/MM/AAAA",
+                              "location": "Cidade/Estado",
+                              "occupation": "Profissão",
+                              "photoURL": "img/julia.jpg",
+                              "bio": "Biografia detalhada..."
+                            }
                           }
                         ]
                       }
@@ -93,28 +174,70 @@
                   },
                   {
                     "name": "Vado",
-                    "class": "man"
+                    "class": "man",
+                    "extra": {
+                      "nickname": "Apelido",
+                      "birthDate": "DD/MM/AAAA",
+                      "deathDate": "DD/MM/AAAA",
+                      "location": "Cidade/Estado",
+                      "occupation": "Profissão",
+                      "photoURL": "img/vado.jpg",
+                      "bio": "Biografia detalhada..."
+                    }
                   },
                   {
                     "name": "Dino",
-                    "class": "man"
+                    "class": "man",
+                    "extra": {
+                      "nickname": "Apelido",
+                      "birthDate": "DD/MM/AAAA",
+                      "deathDate": "DD/MM/AAAA",
+                      "location": "Cidade/Estado",
+                      "occupation": "Profissão",
+                      "photoURL": "img/dino.jpg",
+                      "bio": "Biografia detalhada..."
+                    }
                   },
                   {
                     "name": "Val",
                     "class": "woman",
                     "extra": {
-                      "nickname": "Nicinha"
+                      "nickname": "Apelido",
+                      "birthDate": "DD/MM/AAAA",
+                      "deathDate": "DD/MM/AAAA",
+                      "location": "Cidade/Estado",
+                      "occupation": "Profissão",
+                      "photoURL": "img/nicinha.jpg",
+                      "bio": "Biografia detalhada..."
                     },
                     "marriages": [
                       {
                         "spouse": {
                           "name": "Orlando",
-                          "class": "man rico"
+                          "class": "man rico",
+                          "extra": {
+                            "nickname": "Apelido",
+                            "birthDate": "DD/MM/AAAA",
+                            "deathDate": "DD/MM/AAAA",
+                            "location": "Cidade/Estado",
+                            "occupation": "Profissão",
+                            "photoURL": "img/orlando.jpg",
+                            "bio": "Biografia detalhada..."
+                          }
                         },
                         "children": [
                           {
                             "name": "Luana",
-                            "class": "woman"
+                            "class": "woman",
+                            "extra": {
+                              "nickname": "Apelido",
+                              "birthDate": "DD/MM/AAAA",
+                              "deathDate": "DD/MM/AAAA",
+                              "location": "Cidade/Estado",
+                              "occupation": "Profissão",
+                              "photoURL": "img/luana.jpg",
+                              "bio": "Biografia detalhada..."
+                            }
                           }
                         ]
                       }
@@ -122,29 +245,83 @@
                   },
                   {
                     "name": "Valdemir",
-                    "class": "man"
+                    "class": "man",
+                    "extra": {
+                      "nickname": "Apelido",
+                      "birthDate": "DD/MM/AAAA",
+                      "deathDate": "DD/MM/AAAA",
+                      "location": "Cidade/Estado",
+                      "occupation": "Profissão",
+                      "photoURL": "img/valdemir.jpg",
+                      "bio": "Biografia detalhada..."
+                    }
                   },
                   {
                     "name": "Neca",
-                    "class": "woman"
+                    "class": "woman",
+                    "extra": {
+                      "nickname": "Apelido",
+                      "birthDate": "DD/MM/AAAA",
+                      "deathDate": "DD/MM/AAAA",
+                      "location": "Cidade/Estado",
+                      "occupation": "Profissão",
+                      "photoURL": "img/neca.jpg",
+                      "bio": "Biografia detalhada..."
+                    }
                   },
                   {
                     "name": "Quira",
                     "class": "woman",
+                    "extra": {
+                      "nickname": "Apelido",
+                      "birthDate": "DD/MM/AAAA",
+                      "deathDate": "DD/MM/AAAA",
+                      "location": "Cidade/Estado",
+                      "occupation": "Profissão",
+                      "photoURL": "img/quira.jpg",
+                      "bio": "Biografia detalhada..."
+                    },
                     "marriages": [
                       {
                         "spouse": {
                           "name": "Manoel",
-                          "class": "man rico"
+                          "class": "man rico",
+                          "extra": {
+                            "nickname": "Apelido",
+                            "birthDate": "DD/MM/AAAA",
+                            "deathDate": "DD/MM/AAAA",
+                            "location": "Cidade/Estado",
+                            "occupation": "Profissão",
+                            "photoURL": "img/manoel.jpg",
+                            "bio": "Biografia detalhada..."
+                          }
                         },
                         "children": [
                           {
                             "name": "Marcelo",
-                            "class": "man"
+                            "class": "man",
+                            "extra": {
+                              "nickname": "Apelido",
+                              "birthDate": "DD/MM/AAAA",
+                              "deathDate": "DD/MM/AAAA",
+                              "location": "Cidade/Estado",
+                              "occupation": "Profissão",
+                              "photoURL": "img/marcelo.jpg",
+                              "bio": "Biografia detalhada..."
+                            }
                           },
                           {
                             "name": "Cris",
-                            "class": "woman"
+                            "class": "woman",
+                            "extra": {
+                              "nickname": "Apelido",
+                              "birthDate": "DD/MM/AAAA",
+                              "deathDate": "DD/MM/AAAA",
+                              "location": "Cidade/Estado",
+                              "occupation": "Profissão",
+                              "photoURL": "img/cris.jpg",
+                              "bio": "Biografia detalhada..."
+                            }
                           }
                         ]
                       }
@@ -152,27 +329,99 @@
                   },
                   {
                     "name": "Toinho",
-                    "class": "man"
+                    "class": "man",
+                    "extra": {
+                      "nickname": "Apelido",
+                      "birthDate": "DD/MM/AAAA",
+                      "deathDate": "DD/MM/AAAA",
+                      "location": "Cidade/Estado",
+                      "occupation": "Profissão",
+                      "photoURL": "img/toinho.jpg",
+                      "bio": "Biografia detalhada..."
+                    }
                   },
                   {
                     "name": "Vanda",
-                    "class": "woman"
+                    "class": "woman",
+                    "extra": {
+                      "nickname": "Apelido",
+                      "birthDate": "DD/MM/AAAA",
+                      "deathDate": "DD/MM/AAAA",
+                      "location": "Cidade/Estado",
+                      "occupation": "Profissão",
+                      "photoURL": "img/vanda.jpg",
+                      "bio": "Biografia detalhada..."
+                    }
                   },
                   {
                     "name": "Dirinha",
-                    "class": "woman"
+                    "class": "woman",
+                    "extra": {
+                      "nickname": "Apelido",
+                      "birthDate": "DD/MM/AAAA",
+                      "deathDate": "DD/MM/AAAA",
+                      "location": "Cidade/Estado",
+                      "occupation": "Profissão",
+                      "photoURL": "img/dirinha.jpg",
+                      "bio": "Biografia detalhada..."
+                    }
                   },
                   {
                     "name": "Valmirzinho",
-                    "class": "man"
+                    "class": "man",
+                    "extra": {
+                      "nickname": "Apelido",
+                      "birthDate": "DD/MM/AAAA",
+                      "deathDate": "DD/MM/AAAA",
+                      "location": "Cidade/Estado",
+                      "occupation": "Profissão",
+                      "photoURL": "img/valmirzinho.jpg",
+                      "bio": "Biografia detalhada..."
+                    }
                   },
                   {
                     "name": "Lena",
-                    "class": "woman"
+                    "class": "woman",
+                    "extra": {
+                      "nickname": "Apelido",
+                      "birthDate": "DD/MM/AAAA",
+                      "deathDate": "DD/MM/AAAA",
+                      "location": "Cidade/Estado",
+                      "occupation": "Profissão",
+                      "photoURL": "img/lena.jpg",
+                      "bio": "Biografia detalhada..."
+                    }
                   }
                 ]
               }
             ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Pai de Estela",
+    "class": "man",
+    "marriages": [
+      {
+        "spouse": {
+          "name": "Mãe de Estela",
+          "class": "woman"
+        },
+        "children": [
+          {
+            "name": "Estela",
+            "class": "woman",
+            "marriages": []
+          },
+          {
+            "name": "Irmão 1 de Estela",
+            "class": "man"
+          },
+          {
+            "name": "Irmã 2 de Estela",
+            "class": "woman"
           }
         ]
       }

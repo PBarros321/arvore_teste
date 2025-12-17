@@ -14,11 +14,17 @@ function openPersonModal(name, extra) {
     document.getElementById('person-occupation').innerText = getDetail('occupation');
     document.getElementById('person-bio').innerText = getDetail('bio');
 
-    // Foto (usa a URL do extra, ou um placeholder)
-    // CERTIFIQUE-SE DE QUE 'img/placeholder.jpg' EXISTE OU MUDE PARA UMA URL VÁLIDA.
-    photo.src = extra.photoURL || 'img/placeholder.jpg';
-
-    // Exibe o modal
+    photo.onerror = function () {
+        photo.src = 'img/placeholder.jpg';
+        photo.onerror = null;
+    };
+    const photoURL = extra.photoURL;
+    if (photoURL && photoURL.trim().length > 0) {
+        photo.src = photoURL;
+    } else {
+        photo.src = 'img/placeholder.jpg';
+        photo.onerror = null;
+    }
     modal.style.display = "block";
 }
 
