@@ -5,8 +5,8 @@ treeJson = d3.json("data.json", function (error, treeData) {
             debug: true,
             marriageNodeSize: 20,
             hideMarriageNodes: false,
-            height: 1400,
-            width: 2800,
+            height: 800,
+            width: 1200,
             callbacks: {
                 // IMPLEMENTAÇÃO DO CLIQUE ESQUERDO
                 nodeClick: function (name, extra) {
@@ -20,15 +20,14 @@ treeJson = d3.json("data.json", function (error, treeData) {
                 },
 
 
-
                 textRenderer: function (name, extra, textClass) {
-                    let displayName = "<strong>" + name + "</strong>";
+                    let html = "<p class='name-label'>" + name + "</p>";
                     if (extra && extra.nickname) {
-                        // O apelido aparece embaixo, menor, entre parênteses
-                        displayName += "<br/><span style='font-size: 11px; opacity: 0.8;'>(" + extra.nickname + ")</span>";
+                        html += "<p class='nickname-label'>(" + extra.nickname + ")</p>";
                     }
-                    return "<p class='" + textClass + "'>" + displayName + "</p>";
+                    return html;
                 },
+
                 // Suas funções de clique em casamento (mantidas)
                 marriageClick: function (extra, id) {
                     alert('Clicked marriage node' + id);

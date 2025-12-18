@@ -403,25 +403,70 @@
   {
     "name": "Pai de Estela",
     "class": "man",
+    "extra": {
+      "nickname": "Apelido",
+      "birthDate": "DD/MM/AAAA",
+      "deathDate": "DD/MM/AAAA",
+      "location": "Cidade/Estado",
+      "occupation": "Profissão",
+      "photoURL": "img/done.jpg",
+      "bio": "Biografia detalhada..."
+    },
     "marriages": [
       {
         "spouse": {
           "name": "Mãe de Estela",
-          "class": "woman"
+          "class": "woman",
+          "extra": {
+            "nickname": "Apelido",
+            "birthDate": "DD/MM/AAAA",
+            "deathDate": "DD/MM/AAAA",
+            "location": "Cidade/Estado",
+            "occupation": "Profissão",
+            "photoURL": "img/done.jpg",
+            "bio": "Biografia detalhada..."
+          }
         },
         "children": [
           {
             "name": "Estela",
             "class": "woman",
+            "extra": {
+              "nickname": "Apelido",
+              "birthDate": "DD/MM/AAAA",
+              "deathDate": "DD/MM/AAAA",
+              "location": "Cidade/Estado",
+              "occupation": "Profissão",
+              "photoURL": "img/done.jpg",
+              "bio": "Biografia detalhada..."
+            },
             "marriages": []
           },
           {
             "name": "Irmão 1 de Estela",
-            "class": "man"
+            "class": "man",
+            "extra": {
+              "nickname": "Apelido",
+              "birthDate": "DD/MM/AAAA",
+              "deathDate": "DD/MM/AAAA",
+              "location": "Cidade/Estado",
+              "occupation": "Profissão",
+              "photoURL": "img/done.jpg",
+              "bio": "Biografia detalhada..."
+            }
           },
           {
             "name": "Irmã 2 de Estela",
-            "class": "woman"
+            "class": "woman",
+            "extra": {
+              "nickname": "Apelido",
+              "birthDate": "DD/MM/AAAA",
+              "deathDate": "DD/MM/AAAA",
+              "location": "Cidade/Estado",
+              "occupation": "Profissão",
+              "photoURL": "img/done.jpg",
+              "bio": "Biografia detalhada..."
+            }
           }
         ]
       }

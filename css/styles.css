@@ -1,115 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 body {
-    font: 14px roboto slab, Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    margin: 0;
 }
 
+/* Estilo Base dos Nós */
 .man,
 .woman,
-.rico,
-.marriageNode {
+.rico {
     cursor: pointer;
+    border: none !important;
+    /* Removemos a borda grossa antiga */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px !important;
 }
+
+.man:hover,
+.woman:hover,
+.rico:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
 
 .linage {
     fill: none;
-    stroke: rgb(240, 30, 22);
-    stroke-width: 2px;
+    stroke: #94a3b8;
+    /* Cinza azulado discreto */
+    stroke-width: 1.2px;
 }
 
 .marriage {
     fill: none;
-    stroke: rgb(255, 83, 83);
+    stroke: #94a3b8;
     stroke-width: 2px;
+    stroke-dasharray: 5;
 }
 
 .marriageNode {
     background-color: #94a3b8;
     border-radius: 50%;
     border: none;
+    cursor: pointer;
 }
 
 
 .man {
-    background-color: #d5ecfd;
-    height: 60px;
-    border-style: solid;
+    background: white;
+    border-left: 5px solid #3b82f6 !important;
+    /* Barra lateral azul */
     border-radius: 8px;
-    border-width: 1px;
-    box-sizing: border-box;
 }
+
 
 
 .woman {
-    background-color: #fce4ec;
-    height: 60px;
-    border-style: solid;
+    background: white;
+    border-left: 5px solid #ec4899 !important;
+    /* Barra lateral rosa */
     border-radius: 8px;
-    border-width: 1px;
-    box-sizing: border-box;
 }
+
+
 
 .rico {
-    background-color: #f1f8e9;
-    height: 60px;
-    border-style: solid;
-    border-radius: 30px;
-    border-width: 1px;
-    box-sizing: border-box;
+    background: #f8fafc;
+    border-left: 5px solid #7f8791 !important;
+    border-radius: 20px;
+    font-style: italic;
 }
+
 
 .emphasis {
-    font-weight: bold;
-    background-color: rgb(209, 113, 23);
+    background-color: #fff7ed !important;
+    border: 2px solid #f97316 !important;
 }
 
+
+/* Tipografia Interna */
 p {
-    padding: 5px;
     margin: 0;
+    padding: 0;
     text-align: center;
+    color: #1e293b;
     font-size: 13px;
-    line-height: 1.2;
 }
+
+.name-label {
+    font-weight: 600;
+}
+
+.nickname-label {
+    font-size: 11px;
+    color: #64748b;
+}
+
 
 svg {
-    background-color: #f7f6ca;
-    background-image: radial-gradient(circle at center,
-            #949e80 1px,
-            transparent 2px);
+    background-color: #dae9f8;
+    background-image: radial-gradient(#7ebaf7 1.2px, transparent 1px);
     background-size: 20px 20px;
 }
 
-/* CSS ADICIONAL PARA O MODAL */
+
+
+/* CSS PARA O MODAL REFORMULADO */
 #person-modal {
     display: none;
-    /* Oculto por padrão */
     position: fixed;
-    z-index: 9999;
-    /* Garante que fique acima de tudo */
+    z-index: 10000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6);
-    /* Fundo semi-transparente */
+    background-color: rgba(15, 23, 42, 0.7);
+    /* Azul marinho translúcido */
+    backdrop-filter: blur(4px);
+    /* Efeito de vidro fosco no fundo */
 }
 
 #modal-content {
     background-color: #ffffff;
-    margin: 5% auto;
-    /* 5% do topo e centralizado */
-    padding: 30px;
-    border: 1px solid #888;
+    margin: 8% auto;
+    padding: 0;
+    /* Removido padding para controle total das áreas */
     width: 90%;
-    max-width: 500px;
-    /* Largura máxima controlada */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 450px;
+    border-radius: 16px;
+    overflow: hidden;
+    /* Garante que o conteúdo não saia das bordas arredondadas */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: none;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Header do Modal com cor dinâmica ou neutra */
+.modal-header {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+#person-photo {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1px;
 }
 
 #close-modal {
+    position: absolute;
+    right: 500px;
+    top: 110px;
     color: #aaa;
-    float: right;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -120,10 +174,14 @@ svg {
     text-decoration: none;
 }
 
-#person-photo {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #ADD8E6;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
