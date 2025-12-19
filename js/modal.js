@@ -1,30 +1,52 @@
 function openPersonModal(name, extra) {
     const modal = document.getElementById('person-modal');
     const photo = document.getElementById('person-photo');
+    const nicknameElement = document.getElementById('person-nickname');
+    const containerMorte = document.getElementById('container-morte');
 
-    // Funções auxiliares para evitar "undefined"
-    const getDetail = (key) => extra[key] || 'Não Informado';
+    // Função para preencher o texto ou colocar "---" se estiver vazio
+    const setField = (id, value) => {
+        document.getElementById(id).innerText = value && value !== "DD/MM/AAAA" ? value : "---";
+    };
 
-    // Preenche os campos do modal
+    // Preenche o nome
     document.getElementById('person-name').innerText = name;
-    document.getElementById('person-nickname').innerText = getDetail('nickname');
-    document.getElementById('person-birth').innerText = getDetail('birthDate');
-    document.getElementById('person-death').innerText = getDetail('deathDate');
-    document.getElementById('person-location').innerText = getDetail('location');
-    document.getElementById('person-occupation').innerText = getDetail('occupation');
-    document.getElementById('person-bio').innerText = getDetail('bio');
 
+    // Trata o Apelido de forma especial: se não tiver, ele some
+    if (extra.nickname && extra.nickname !== "Apelido") {
+        nicknameElement.innerText = "(" + extra.nickname + ")";
+        nicknameElement.style.display = "block";
+    } else {
+        nicknameElement.style.display = "none";
+    }
+
+    // Trata a data de morte de forma especial: se não tiver, o campo some
+    if (extra.deathDate && extra.deathDate.trim() !== "" && extra.deathDate !== "DD/MM/AAAA") {
+        document.getElementById('person-death').innerText = extra.deathDate;
+        containerMorte.style.display = "block"; // Mostra se tiver data
+    } else {
+        containerMorte.style.display = "none";  // Esconde se estiver vazio ou padrão
+    }
+
+    // Preenche os outros campos usando a função auxiliar
+    setField('person-birth', extra.birthDate);
+    setField('person-death', extra.deathDate);
+    setField('person-location', extra.location);
+    setField('person-occupation', extra.occupation);
+    setField('person-bio', extra.bio);
+
+    // Lógica da Foto
     photo.onerror = function () {
         photo.src = 'img/placeholder.jpg';
         photo.onerror = null;
     };
-    const photoURL = extra.photoURL;
-    if (photoURL && photoURL.trim().length > 0) {
-        photo.src = photoURL;
+
+    if (extra.photoURL && extra.photoURL.trim().length > 0) {
+        photo.src = extra.photoURL;
     } else {
         photo.src = 'img/placeholder.jpg';
-        photo.onerror = null;
     }
+
     modal.style.display = "block";
 }
 

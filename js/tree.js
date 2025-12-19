@@ -5,8 +5,11 @@ treeJson = d3.json("data.json", function (error, treeData) {
             debug: true,
             marriageNodeSize: 20,
             hideMarriageNodes: false,
-            height: 800,
-            width: 1200,
+            height: window.innerHeight,
+            width: window.innerWidth,
+            nodeWidth: 100,
+            nodeHeight: 60,
+            zoom: true,
             callbacks: {
                 // IMPLEMENTAÇÃO DO CLIQUE ESQUERDO
                 nodeClick: function (name, extra) {

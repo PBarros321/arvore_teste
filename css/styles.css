@@ -4,26 +4,31 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: #f8fafc;
     margin: 0;
+    overflow: hidden;
 }
 
 /* Estilo Base dos Nós */
 .man,
 .woman,
-.rico {
+.conjuge {
     cursor: pointer;
     border: none !important;
-    /* Removemos a borda grossa antiga */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: all 0.2s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8px !important;
+    align-items: center;
+    width: 100px !important;
+    height: 60px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    padding: 2px !important;
 }
 
 .man:hover,
 .woman:hover,
-.rico:hover {
+.conjuge:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
@@ -69,8 +74,8 @@ body {
 
 
 
-.rico {
-    background: #f8fafc;
+.conjuge {
+    background: #eaeef1;
     border-left: 5px solid #7f8791 !important;
     border-radius: 20px;
     font-style: italic;
@@ -87,18 +92,19 @@ body {
 p {
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: center !important;
     color: #1e293b;
-    font-size: 13px;
-}
-
-.name-label {
-    font-weight: 600;
+    font-size: 10px;
+    width: 100%;
+    word-wrap: break-word;
+    /* Faz o nome quebrar linha se for grande */
+    line-height: 1.1;
+    /* Diminui o espaço entre linhas para caber mais texto nos 60px */
 }
 
 .nickname-label {
-    font-size: 11px;
-    color: #64748b;
+    font-size: 14px;
+    color: #000000;
 }
 
 
@@ -126,6 +132,7 @@ svg {
 }
 
 #modal-content {
+    position: relative;
     background-color: #ffffff;
     margin: 8% auto;
     padding: 0;
@@ -158,20 +165,62 @@ svg {
     margin-bottom: 1px;
 }
 
-#close-modal {
-    position: absolute;
-    right: 500px;
-    top: 110px;
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+#person-bio {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #1e293b;
+    width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    padding: 0px !important;
+
 }
 
-#close-modal:hover,
+#close-modal {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #64748b;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 10;
+}
+
+#close-modal:hover {
+    color: #ef4444;
+    /* Fica vermelho ao passar o mouse */
+}
+
 #close-modal:focus {
     color: #000;
     text-decoration: none;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Divide em duas colunas */
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.info-item {
+    font-size: 13px;
+    color: #334155;
+    line-height: 1.4;
+}
+
+.info-item strong {
+    display: block;
+    /* Faz o rótulo ficar em cima do valor */
+    color: #64748b;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 @keyframes fadeIn {

@@ -12,9 +12,12 @@
 
 <body>
 
-	<center style="background-color: #dae6ad; padding: 10px; border-radius: 5px;">
-		<h1>Árvore Genealógica Gonsalves</h1>
-	</center>
+	<header style="background-color: #f1f5f9; padding: 20px; border-bottom: 3px solid #3b82f6;">
+		<h1 style="color: #1e293b; margin: 0; font-family: 'Roboto Slab', serif; text-align: center; font-size: 24px;">
+			Árvore Genealógica Gonsalves
+		</h1>
+	</header>
+
 	<div id="graph"></div>
 
 	<div id="person-modal">
@@ -22,19 +25,35 @@
 			<span id="close-modal">&times;</span>
 
 			<div id="modal-body">
-				<div style="text-align: center; margin-bottom: 5px;">
-					<img id="person-photo" src="" alt="Foto da Pessoa">
+				<div style="text-align: center; margin-bottom: 15px;">
+					<img id="person-photo" src="" alt="Foto">
 				</div>
 
-				<h2 id="person-name" style="text-align: center;"></h2>
-				<hr>
-				<p><strong>Nascimento:</strong> <span id="person-birth"></span></p>
-				<p><strong>Morte:</strong> <span id="person-death"></span></p>
-				<p><strong>Local:</strong> <span id="person-location"></span></p>
-				<p><strong>Ocupação:</strong> <span id="person-occupation"></span></p>
-				<p><strong>Apelido:</strong> <span id="person-nickname"></span></p>
-				<hr>
-				<p style="text-align: justify;"><small id="person-bio"></small></p>
+				<h2 id="person-name" style="text-align: center; margin-bottom: 5px; color: #1e293b;"></h2>
+				<p id="person-nickname"
+					style="text-align: center; color: #64748b; font-style: italic; margin-bottom: 15px;"></p>
+
+				<hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 15px 0;">
+
+				<div class="info-grid">
+					<div class="info-item">
+						<strong>Nascimento:</strong> <span id="person-birth"></span>
+					</div>
+					<div class="info-item" id="container-morte">
+						<strong>Morte:</strong> <span id="person-death"></span>
+					</div>
+					<div class="info-item">
+						<strong>Local:</strong> <span id="person-location"></span>
+					</div>
+					<div class="info-item">
+						<strong>Ocupação:</strong> <span id="person-occupation"></span>
+					</div>
+				</div>
+
+				<hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 15px 0;">
+				<p style="text-align: justify; padding: 0 10px;">
+					<small id="person-bio"></small>
+				</p>
 			</div>
 		</div>
 	</div>

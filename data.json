@@ -3,7 +3,7 @@
     "name": "Maximino",
     "class": "man",
     "extra": {
-      "nickname": "Apelido",
+      "nickname": "Vovô",
       "birthDate": "DD/MM/AAAA",
       "deathDate": "DD/MM/AAAA",
       "location": "Cidade/Estado",
@@ -15,9 +15,9 @@
       {
         "spouse": {
           "name": "Julinha",
-          "class": "woman rico",
+          "class": "woman conjuge",
           "extra": {
-            "nickname": "Apelido",
+            "nickname": "Vovó",
             "birthDate": "DD/MM/AAAA",
             "deathDate": "DD/MM/AAAA",
             "location": "Cidade/Estado",
@@ -28,31 +28,31 @@
         },
         "children": [
           {
-            "name": "Valmir",
+            "name": "Valmir Gonsalves",
             "class": "man",
             "textClass": "emphasis",
             "extra": {
-              "nickname": "Apelido",
-              "birthDate": "DD/MM/AAAA",
-              "deathDate": "DD/MM/AAAA",
-              "location": "Cidade/Estado",
-              "occupation": "Profissão",
+              "nickname": "Pai",
+              "birthDate": "10/12/1933",
+              "deathDate": "22/08/2010",
+              "location": "Cairu/Bahia",
+              "occupation": "Pescador",
               "photoURL": "img/valmir.jpg",
-              "bio": "Biografia detalhada..."
+              "bio": "Gostava muito de pescar e dizia \"dhê dhuas dhobra aqui\". "
             },
             "marriages": [
               {
                 "spouse": {
-                  "name": "Estela",
-                  "class": "woman rico",
+                  "name": "Estela dos Santos Gonçalves",
+                  "class": "woman conjuge",
                   "extra": {
-                    "nickname": "Apelido",
-                    "birthDate": "DD/MM/AAAA",
-                    "deathDate": "DD/MM/AAAA",
-                    "location": "Cidade/Estado",
-                    "occupation": "Profissão",
+                    "nickname": "Mãe",
+                    "birthDate": "18/01/1935",
+                    "deathDate": "20/01/1999",
+                    "location": "Cairu/Bahia",
+                    "occupation": "Dona de Casa",
                     "photoURL": "img/estela.jpg",
-                    "bio": "Biografia detalhada..."
+                    "bio": "Era um amor de pessoa, sempre cuidou muito bem de todos os seus filho e dos agregados que chegavam na família."
                   }
                 },
                 "children": [
@@ -60,7 +60,7 @@
                     "name": "Valdeci",
                     "class": "man",
                     "extra": {
-                      "nickname": "Apelido",
+                      "nickname": "Cici",
                       "birthDate": "DD/MM/AAAA",
                       "deathDate": "DD/MM/AAAA",
                       "location": "Cidade/Estado",
@@ -71,10 +71,10 @@
                     "marriages": [
                       {
                         "spouse": {
-                          "name": "Graça",
-                          "class": "woman rico",
+                          "name": "Maria das Graças",
+                          "class": "woman conjuge",
                           "extra": {
-                            "nickname": "Apelido",
+                            "nickname": "Graça",
                             "birthDate": "DD/MM/AAAA",
                             "deathDate": "DD/MM/AAAA",
                             "location": "Cidade/Estado",
@@ -88,7 +88,7 @@
                             "name": "Alisson",
                             "class": "man",
                             "extra": {
-                              "nickname": "Apelido",
+                              "nickname": "Alisson",
                               "birthDate": "DD/MM/AAAA",
                               "deathDate": "DD/MM/AAAA",
                               "location": "Cidade/Estado",
@@ -115,10 +115,10 @@
                     ]
                   },
                   {
-                    "name": "Lita - Valdelice dos Santos Gonçalves",
+                    "name": "Valdelice dos Santos Gonçalves",
                     "class": "woman",
                     "extra": {
-                      "nickname": "Apelido",
+                      "nickname": "Lita",
                       "birthDate": "DD/MM/AAAA",
                       "deathDate": "DD/MM/AAAA",
                       "location": "Cidade/Estado",
@@ -130,7 +130,7 @@
                       {
                         "spouse": {
                           "name": "Jorge",
-                          "class": "man rico",
+                          "class": "man conjuge",
                           "extra": {
                             "nickname": "Apelido",
                             "birthDate": "DD/MM/AAAA",
@@ -160,10 +160,10 @@
                     ]
                   },
                   {
-                    "name": "Lito",
+                    "name": "Valdelito dos Santos Gonçalves",
                     "class": "man",
                     "extra": {
-                      "nickname": "Apelido",
+                      "nickname": "Lito",
                       "birthDate": "DD/MM/AAAA",
                       "deathDate": "DD/MM/AAAA",
                       "location": "Cidade/Estado",
@@ -173,10 +173,10 @@
                     }
                   },
                   {
-                    "name": "Vado",
+                    "name": "",
                     "class": "man",
                     "extra": {
-                      "nickname": "Apelido",
+                      "nickname": "Vado",
                       "birthDate": "DD/MM/AAAA",
                       "deathDate": "DD/MM/AAAA",
                       "location": "Cidade/Estado",
@@ -186,10 +186,10 @@
                     }
                   },
                   {
-                    "name": "Dino",
+                    "name": "",
                     "class": "man",
                     "extra": {
-                      "nickname": "Apelido",
+                      "nickname": "Dino",
                       "birthDate": "DD/MM/AAAA",
                       "deathDate": "DD/MM/AAAA",
                       "location": "Cidade/Estado",
@@ -199,10 +199,10 @@
                     }
                   },
                   {
-                    "name": "Val",
+                    "name": "Valdenice dos Santos Gonçalves",
                     "class": "woman",
                     "extra": {
-                      "nickname": "Apelido",
+                      "nickname": "Val",
                       "birthDate": "DD/MM/AAAA",
                       "deathDate": "DD/MM/AAAA",
                       "location": "Cidade/Estado",
@@ -214,7 +214,7 @@
                       {
                         "spouse": {
                           "name": "Orlando",
-                          "class": "man rico",
+                          "class": "man conjuge",
                           "extra": {
                             "nickname": "Apelido",
                             "birthDate": "DD/MM/AAAA",
@@ -285,7 +285,7 @@
                       {
                         "spouse": {
                           "name": "Manoel",
-                          "class": "man rico",
+                          "class": "man conjuge",
                           "extra": {
                             "nickname": "Apelido",
                             "birthDate": "DD/MM/AAAA",
@@ -416,7 +416,7 @@
       {
         "spouse": {
           "name": "Mãe de Estela",
-          "class": "woman",
+          "class": "woman conjuge",
           "extra": {
             "nickname": "Apelido",
             "birthDate": "DD/MM/AAAA",
