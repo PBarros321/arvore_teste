@@ -1,70 +1,76 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-br">
 
 <head>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-	<meta charset="utf-8">
-	<title>Árvore Genealógica</title>
-	<link rel="stylesheet" href="css/styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore Genealógica Gonsalves</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-	<header style="background-color: #f1f5f9; padding: 20px; border-bottom: 3px solid #3b82f6;">
-		<h1 style="color: #1e293b; margin: 0; font-family: 'Roboto Slab', serif; text-align: center; font-size: 24px;">
-			Árvore Genealógica Gonsalves
-		</h1>
-	</header>
+    <header class="main-header">
+        <h1>Árvore Genealógica Gonsalves</h1>
+    </header>
 
-	<div id="graph"></div>
+    <main id="graph"></main>
 
-	<div id="person-modal">
-		<div id="modal-content">
-			<span id="close-modal">&times;</span>
+    <div id="person-modal" class="modal">
+        <div id="modal-content" class="modal-card">
+            <span id="close-modal">&times;</span>
 
-			<div id="modal-body">
-				<div style="text-align: center; margin-bottom: 15px;">
-					<img id="person-photo" src="" alt="Foto">
-				</div>
+            <div class="modal-header-visual">
+                <img id="person-photo" src="" alt="Foto de perfil">
+            </div>
 
-				<h2 id="person-name" style="text-align: center; margin-bottom: 5px; color: #1e293b;"></h2>
-				<p id="person-nickname"
-					style="text-align: center; color: #64748b; font-style: italic; margin-bottom: 15px;"></p>
+            <div id="modal-body">
+                <h2 id="person-name"></h2>
+                <p id="person-nickname"></p>
 
-				<hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 15px 0;">
+                <hr class="divider">
 
-				<div class="info-grid">
-					<div class="info-item">
-						<strong>Nascimento:</strong> <span id="person-birth"></span>
-					</div>
-					<div class="info-item" id="container-morte">
-						<strong>Morte:</strong> <span id="person-death"></span>
-					</div>
-					<div class="info-item">
-						<strong>Local:</strong> <span id="person-location"></span>
-					</div>
-					<div class="info-item">
-						<strong>Ocupação:</strong> <span id="person-occupation"></span>
-					</div>
-				</div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>Nascimento</strong>
+                        <span id="person-birth"></span>
+                    </div>
+                    <div class="info-item" id="container-morte">
+                        <strong>Morte</strong>
+                        <span id="person-death"></span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Local</strong>
+                        <span id="person-location"></span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Ocupação</strong>
+                        <span id="person-occupation"></span>
+                    </div>
+                </div>
 
-				<hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 15px 0;">
-				<p style="text-align: justify; padding: 0 10px;">
-					<small id="person-bio"></small>
-				</p>
-			</div>
-		</div>
-	</div>
+                <hr class="divider">
 
-	<script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
-	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<script src="dTree.min.js"></script>
+                <div class="bio-container">
+                    <strong>Biografia</strong>
+                    <p id="person-bio"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<script src="js/modal.js"></script>
-	<script src="js/tree.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="dTree.min.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/tree.js"></script>
 </body>
 
 </html>

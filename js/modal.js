@@ -1,68 +1,68 @@
-function openPersonModal(name, extra) {
-    const modal = document.getElementById('person-modal');
-    const photo = document.getElementById('person-photo');
-    const nicknameElement = document.getElementById('person-nickname');
-    const containerMorte = document.getElementById('container-morte');
+const ModalManager = {
+    // Cache de elementos para melhor performance
+    elements: {
+        modal: document.getElementById('person-modal'),
+        name: document.getElementById('person-name'),
+        photo: document.getElementById('person-photo'),
+        nickname: document.getElementById('person-nickname'),
+        deathContainer: document.getElementById('container-morte'),
+        bio: document.getElementById('person-bio')
+    },
 
-    // Função para preencher o texto ou colocar "---" se estiver vazio
-    const setField = (id, value) => {
-        document.getElementById(id).innerText = value && value !== "DD/MM/AAAA" ? value : "---";
-    };
+    open(name, extra) {
+        const { elements } = this;
 
-    // Preenche o nome
-    document.getElementById('person-name').innerText = name;
+        // Helper interno para preencher campos
+        const fill = (id, value, fallback = "---") => {
+            const el = document.getElementById(id);
+            if (el) el.innerText = (value && value !== "DD/MM/AAAA") ? value : fallback;
+        };
 
-    // Trata o Apelido de forma especial: se não tiver, ele some
-    if (extra.nickname && extra.nickname !== "Apelido") {
-        nicknameElement.innerText = "(" + extra.nickname + ")";
-        nicknameElement.style.display = "block";
-    } else {
-        nicknameElement.style.display = "none";
+        // Nome e Apelido
+        elements.name.innerText = name || "Sem Nome";
+        if (extra.nickname && extra.nickname !== "Apelido") {
+            elements.nickname.innerText = `(${extra.nickname})`;
+            elements.nickname.style.display = "block";
+        } else {
+            elements.nickname.style.display = "none";
+        }
+
+        // Datas e Campos Gerais
+        fill('person-birth', extra.birthDate);
+        fill('person-location', extra.location);
+        fill('person-occupation', extra.occupation);
+        fill('person-bio', extra.bio, "Nenhuma biografia disponível.");
+
+        // Lógica de Morte (Esconde se estiver vivo ou data padrão)
+        if (extra.deathDate && extra.deathDate.trim() !== "" && extra.deathDate !== "DD/MM/AAAA") {
+            fill('person-death', extra.deathDate);
+            elements.deathContainer.style.display = "block";
+        } else {
+            elements.deathContainer.style.display = "none";
+        }
+
+        // Imagem com Placeholder
+        elements.photo.src = extra.photoURL || 'img/placeholder.jpg';
+        elements.photo.onerror = () => {
+            elements.photo.src = 'img/placeholder.jpg';
+        };
+
+        elements.modal.style.display = "block";
+    },
+
+    close() {
+        this.elements.modal.style.display = "none";
     }
+};
 
-    // Trata a data de morte de forma especial: se não tiver, o campo some
-    if (extra.deathDate && extra.deathDate.trim() !== "" && extra.deathDate !== "DD/MM/AAAA") {
-        document.getElementById('person-death').innerText = extra.deathDate;
-        containerMorte.style.display = "block"; // Mostra se tiver data
-    } else {
-        containerMorte.style.display = "none";  // Esconde se estiver vazio ou padrão
+// Event Listeners
+document.getElementById('close-modal').onclick = () => ModalManager.close();
+
+window.onclick = (event) => {
+    if (event.target === ModalManager.elements.modal) {
+        ModalManager.close();
     }
+};
 
-    // Preenche os outros campos usando a função auxiliar
-    setField('person-birth', extra.birthDate);
-    setField('person-death', extra.deathDate);
-    setField('person-location', extra.location);
-    setField('person-occupation', extra.occupation);
-    setField('person-bio', extra.bio);
-
-    // Lógica da Foto
-    photo.onerror = function () {
-        photo.src = 'img/placeholder.jpg';
-        photo.onerror = null;
-    };
-
-    if (extra.photoURL && extra.photoURL.trim().length > 0) {
-        photo.src = extra.photoURL;
-    } else {
-        photo.src = 'img/placeholder.jpg';
-    }
-
-    modal.style.display = "block";
-}
-
-function closePersonModal() {
-    document.getElementById('person-modal').style.display = "none";
-}
-
-// Lógica para fechar o modal ao clicar no 'x'
-document.getElementById('close-modal').onclick = closePersonModal;
-
-// Lógica para fechar o modal ao clicar fora dele
-window.onclick = function (event) {
-    const modal = document.getElementById('person-modal');
-    if (event.target == modal) {
-        closePersonModal();
-    }
-}
-// Exporta a função para que `tree.js` possa usá-la
-window.openPersonModal = openPersonModal;
+// Expondo a função globalmente para o dTree
+window.openPersonModal = (name, extra) => ModalManager.open(name, extra);

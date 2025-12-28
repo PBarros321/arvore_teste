@@ -52,7 +52,7 @@
                     "location": "Cairu/Bahia",
                     "occupation": "Dona de Casa",
                     "photoURL": "img/estela.jpg",
-                    "bio": "Era um amor de pessoa, sempre cuidou muito bem de todos os seus filho e dos agregados que chegavam na família."
+                    "bio": "Era um amor de pessoa, sempre cuidou muito bem de todos os seus filhos e dos agregados que chegavam na família."
                   }
                 },
                 "children": [
@@ -351,7 +351,104 @@
                       "occupation": "Profissão",
                       "photoURL": "img/vanda.jpg",
                       "bio": "Biografia detalhada..."
-                    }
+                    },
+                    "marriages": [
+                      {
+                        "spouse": {
+                          "name": "",
+                          "class": "man conjuge",
+                          "extra": {
+                            "nickname": "Pai de Josi",
+                            "birthDate": "DD/MM/AAAA",
+                            "deathDate": "DD/MM/AAAA",
+                            "location": "Cidade/Estado",
+                            "occupation": "Profissão",
+                            "photoURL": "img/done.jpg",
+                            "bio": "Biografia detalhada..."
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "",
+                            "class": "woman",
+                            "textClass": "emphasis",
+                            "extra": {
+                              "nickname": "Josi",
+                              "birthDate": "",
+                              "deathDate": "",
+                              "location": "",
+                              "occupation": "",
+                              "photoURL": "img/done.jpg",
+                              "bio": ""
+                            },
+                            "marriages": [
+                              {
+                                "spouse": {
+                                  "name": "",
+                                  "class": "man conjuge",
+                                  "extra": {
+                                    "nickname": "Pai de Érica",
+                                    "birthDate": "",
+                                    "deathDate": "",
+                                    "location": "",
+                                    "occupation": "",
+                                    "photoURL": "img/done.jpg",
+                                    "bio": ""
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "Érica",
+                                    "class": "woman",
+                                    "extra": {
+                                      "nickname": "",
+                                      "birthDate": "DD/MM/AAAA",
+                                      "deathDate": "DD/MM/AAAA",
+                                      "location": "Cidade/Estado",
+                                      "occupation": "Profissão",
+                                      "photoURL": "img/done.jpg",
+                                      "bio": "Biografia detalhada..."
+                                    },
+                                    "marriages": [
+                                      {
+                                        "spouse": {
+                                          "name": "",
+                                          "class": "man conjuge",
+                                          "extra": {
+                                            "nickname": "Marido de Érica",
+                                            "birthDate": "DD/MM/AAAA",
+                                            "deathDate": "DD/MM/AAAA",
+                                            "location": "Cidade/Estado",
+                                            "occupation": "Profissão",
+                                            "photoURL": "img/done.jpg",
+                                            "bio": "Biografia detalhada..."
+                                          }
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "",
+                                            "class": "woman",
+                                            "extra": {
+                                              "nickname": "Neta de Josi",
+                                              "birthDate": "DD/MM/AAAA",
+                                              "deathDate": "DD/MM/AAAA",
+                                              "location": "Cidade/Estado",
+                                              "occupation": "Profissão",
+                                              "photoURL": "img/done.jpg",
+                                              "bio": "Biografia detalhada..."
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     "name": "Dirinha",

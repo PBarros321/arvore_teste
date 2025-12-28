@@ -8,7 +8,7 @@ treeJson = d3.json("data.json", function (error, treeData) {
             height: window.innerHeight,
             width: window.innerWidth,
             nodeWidth: 100,
-            nodeHeight: 60,
+            nodeHeight: 80,
             zoom: true,
             callbacks: {
                 // IMPLEMENTAÇÃO DO CLIQUE ESQUERDO

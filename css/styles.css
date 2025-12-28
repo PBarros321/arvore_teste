@@ -1,19 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+/* Variáveis para facilitar mudanças de cor */
+:root {
+    --homens: #3b82f6;
+    --mulheres: #ec4899;
+    --texto: #1e293b;
+    --conjuges: #64748b;
+    --fundoParentes: #ffffff;
+    --fundoSvg: #dae9f8;
+    --sombra: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f8fafc;
+    background-color: var(--fundoParentes);
     margin: 0;
     overflow: hidden;
 }
 
-/* Estilo Base dos Nós */
+.main-header {
+    background-color: var(--fundoSvg);
+    padding: 20px;
+    border-bottom: 3px solid var(--homens);
+}
+
+.main-header h1 {
+    color: var(--texto);
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Estilo dos Nós da Árvore */
 .man,
 .woman,
 .conjuge {
     cursor: pointer;
-    border: none !important;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: none;
+    box-shadow: var(--sombra);
     transition: all 0.2s ease;
     display: flex;
     flex-direction: column;
@@ -24,209 +47,186 @@ body {
     margin: 0 !important;
     box-sizing: border-box !important;
     padding: 2px !important;
+    background: var(--fundoParentes);
+    border-radius: 8px;
+}
+
+.man p,
+.woman p,
+.conjuge p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    color: var(--texto);
+}
+
+.man {
+    border-left: 5px solid var(--homens) !important;
+}
+
+.woman {
+    border-left: 5px solid var(--mulheres) !important;
+}
+
+.conjuge {
+    background: var(--fundoParentes);
+    border: 2px solid var(--conjuges) !important;
+    font-style: italic;
+    border-radius: 14px;
+    background: var(--fundoSvg);
 }
 
 .man:hover,
 .woman:hover,
 .conjuge:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--sombra);
 }
 
+.name-label {
+    font-size: 12px;
+}
+
+.nickname-label {
+    font-size: 15px;
+    font-weight: bold;
+}
 
 .linage {
     fill: none;
-    stroke: #94a3b8;
-    /* Cinza azulado discreto */
-    stroke-width: 1.2px;
+    stroke: var(--conjuges);
+    stroke-width: 1.5px;
 }
 
+/* A linha de união entre os casais */
 .marriage {
     fill: none;
-    stroke: #94a3b8;
-    stroke-width: 2px;
+    stroke: var(--conjuges);
+    stroke-width: 1.5px;
     stroke-dasharray: 5;
 }
 
 .marriageNode {
-    background-color: #94a3b8;
+    background-color: var(--conjuges);
     border-radius: 50%;
     border: none;
     cursor: pointer;
+
 }
 
-
-.man {
-    background: white;
-    border-left: 5px solid #3b82f6 !important;
-    /* Barra lateral azul */
-    border-radius: 8px;
-}
-
-
-
-.woman {
-    background: white;
-    border-left: 5px solid #ec4899 !important;
-    /* Barra lateral rosa */
-    border-radius: 8px;
-}
-
-
-
-.conjuge {
-    background: #eaeef1;
-    border-left: 5px solid #7f8791 !important;
-    border-radius: 20px;
-    font-style: italic;
-}
-
-
-.emphasis {
-    background-color: #fff7ed !important;
-    border: 2px solid #f97316 !important;
-}
-
-
-/* Tipografia Interna */
-p {
-    margin: 0;
-    padding: 0;
-    text-align: center !important;
-    color: #1e293b;
-    font-size: 10px;
-    width: 100%;
-    word-wrap: break-word;
-    /* Faz o nome quebrar linha se for grande */
-    line-height: 1.1;
-    /* Diminui o espaço entre linhas para caber mais texto nos 60px */
-}
-
-.nickname-label {
-    font-size: 14px;
-    color: #000000;
-}
-
-
+/* SVG Background */
 svg {
-    background-color: #dae9f8;
-    background-image: radial-gradient(#7ebaf7 1.2px, transparent 1px);
-    background-size: 20px 20px;
+    background-color: var(--fundoSvg);
+    background-image: radial-gradient(var(--conjuges) 1px, transparent 1px);
+    background-size: 22px 22px;
 }
 
-
-
-/* CSS PARA O MODAL REFORMULADO */
-#person-modal {
+.modal {
     display: none;
     position: fixed;
-    z-index: 10000;
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(15, 23, 42, 0.7);
-    /* Azul marinho translúcido */
     backdrop-filter: blur(4px);
-    /* Efeito de vidro fosco no fundo */
 }
 
-#modal-content {
-    position: relative;
-    background-color: #ffffff;
-    margin: 8% auto;
-    padding: 0;
-    /* Removido padding para controle total das áreas */
-    width: 90%;
-    max-width: 450px;
-    border-radius: 16px;
-    overflow: hidden;
-    /* Garante que o conteúdo não saia das bordas arredondadas */
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    border: none;
-    animation: fadeIn 0.3s ease-out;
-}
-
-/* Header do Modal com cor dinâmica ou neutra */
-.modal-header {
-    background-color: #f8fafc;
-    padding: 20px;
-    border-bottom: 1px solid #e2e8f0;
+#person-nickname {
     text-align: center;
+    padding: 0px;
 }
 
-#person-photo {
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1px;
+#person-name {
+    text-align: center;
+    padding: 0px;
 }
 
-#person-bio {
+.modal-card {
+    position: relative;
+    background: var(--fundoParentes);
+    margin: 5% auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    animation: slideUp 0.4s ease-out;
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #1e293b;
-    width: 100% !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-    padding: 0px !important;
-
+.modal-header-visual {
+    background: var(--fundoParentes);
+    padding: 10px 0 10px 0;
+    text-align: center;
 }
 
 #close-modal {
     position: absolute;
-    right: 15px;
+    /* Permite colocar o X no canto do modal */
     top: 10px;
-    color: #64748b;
-    font-size: 30px;
+    /* Distância do topo */
+    right: 15px;
+    /* Distância da direita */
+    font-size: 28px;
+    /* Tamanho do X */
     font-weight: bold;
+    /* Deixa o traço mais grosso */
+    color: var(--texto);
+    /* Usa a cor suave que você definiu nas variáveis */
     cursor: pointer;
-    line-height: 1;
-    z-index: 10;
+    /* Muda o mouse para a "mãozinha" ao passar por cima */
 }
 
 #close-modal:hover {
-    color: #ef4444;
-    /* Fica vermelho ao passar o mouse */
+    color: var(--mulheres);
+    /* O X muda para rosa (sua cor secondary) ao passar o mouse */
 }
 
-#close-modal:focus {
-    color: #000;
-    text-decoration: none;
+#person-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid var(--conjuges);
+    box-shadow: var(--sombra);
+    object-fit: cover;
 }
 
 .info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Divide em duas colunas */
-    gap: 10px;
-    padding: 0 20px;
+    gap: 15px;
+    padding: 20px;
 }
 
-.info-item {
-    font-size: 13px;
-    color: #334155;
-    line-height: 1.4;
-}
-
-.info-item strong {
+.info-item strong,
+.bio-container strong {
     display: block;
-    /* Faz o rótulo ficar em cima do valor */
-    color: #64748b;
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    color: var(--conjuges);
+    letter-spacing: 1px;
 }
 
-@keyframes fadeIn {
+.bio-container {
+    padding: 0 20px 20px 20px;
+}
+
+#person-bio {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 5px;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid var(--conjuges);
+    margin: 0;
+}
+
+@keyframes slideUp {
     from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(30px);
     }
 
     to {
